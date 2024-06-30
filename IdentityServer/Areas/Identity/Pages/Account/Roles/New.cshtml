@@ -1,0 +1,30 @@
+﻿@page
+@model IdentityServer.Areas.Identity.Pages.Account.Roles.NewModel
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+        <h2 class="m-0 text-dark">@ViewData["Title"]</h2>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+        <div class="float-sm-end">
+           <a id="new-user" class="btn btn-primary" asp-area="Identity" asp-page="/Account/Roles/Index">Listado</a>
+        </div>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 margin-tb">
+                 <partial name="_Form" model="Model" />
+            </div>
+        </div>
+    </div>
+</div>

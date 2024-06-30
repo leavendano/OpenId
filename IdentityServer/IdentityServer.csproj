@@ -1,0 +1,173 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	<TargetFramework>net8.0</TargetFramework>
+	<Nullable>enable</Nullable>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<UserSecretsId>aspnet-IdentityServer-251F46B5-0B08-4C84-8551-F67A20355727</UserSecretsId>
+	<Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\css\app-creative-dark-rtl.min.css.map" />
+    <None Include="wwwroot\assets\css\app-creative-dark.min.css.map" />
+    <None Include="wwwroot\assets\css\app-creative-rtl.min.css.map" />
+    <None Include="wwwroot\assets\css\app-creative.min.css.map" />
+    <None Include="wwwroot\assets\css\app-dark-rtl.min.css.map" />
+    <None Include="wwwroot\assets\css\app-dark.min.css.map" />
+    <None Include="wwwroot\assets\css\app-modern-dark-rtl.min.css.map" />
+    <None Include="wwwroot\assets\css\app-modern-dark.min.css.map" />
+    <None Include="wwwroot\assets\css\app-modern-rtl.min.css.map" />
+    <None Include="wwwroot\assets\css\app-modern.min.css.map" />
+    <None Include="wwwroot\assets\css\app-rtl.min.css.map" />
+    <None Include="wwwroot\assets\css\app.min.css.map" />
+    <None Include="wwwroot\assets\css\icons-rtl.min.css.map" />
+    <None Include="wwwroot\assets\css\icons.min.css.map" />
+    <None Include="wwwroot\assets\fonts\dripicons-v2.svg" />
+    <None Include="wwwroot\assets\fonts\materialdesignicons-webfont.woff2" />
+    <None Include="wwwroot\assets\fonts\Nunito-Bold.svg" />
+    <None Include="wwwroot\assets\fonts\Nunito-Light.svg" />
+    <None Include="wwwroot\assets\fonts\Nunito-Light.woff2" />
+    <None Include="wwwroot\assets\fonts\Nunito-Regular.svg" />
+    <None Include="wwwroot\assets\fonts\Nunito-SemiBold.svg" />
+    <None Include="wwwroot\assets\fonts\unicons.svg" />
+    <None Include="wwwroot\assets\fonts\unicons.woff2" />
+    <None Include="wwwroot\assets\images\bg-pattern-light.svg" />
+    <None Include="wwwroot\assets\images\email-campaign.svg" />
+    <None Include="wwwroot\assets\images\features-1.svg" />
+    <None Include="wwwroot\assets\images\features-2.svg" />
+    <None Include="wwwroot\assets\images\file-searching.svg" />
+    <None Include="wwwroot\assets\images\help-icon.svg" />
+    <None Include="wwwroot\assets\images\mail_sent.svg" />
+    <None Include="wwwroot\assets\images\maintenance.svg" />
+    <None Include="wwwroot\assets\images\report.svg" />
+    <None Include="wwwroot\assets\images\startman.svg" />
+    <None Include="wwwroot\assets\images\startup.svg" />
+    <None Include="wwwroot\assets\js\app.js" />
+    <None Include="wwwroot\assets\js\app.min.js" />
+    <None Include="wwwroot\assets\js\app.min.js.map" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-area.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-bar.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-bubble.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-candlestick.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-column.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-heatmap.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-line.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-mixed.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-pie.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-radar.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-radialbar.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-scatter.js" />
+    <None Include="wwwroot\assets\js\pages\demo.apex-sparklines.js" />
+    <None Include="wwwroot\assets\js\pages\demo.britechart.js" />
+    <None Include="wwwroot\assets\js\pages\demo.calendar.js" />
+    <None Include="wwwroot\assets\js\pages\demo.chartjs.js" />
+    <None Include="wwwroot\assets\js\pages\demo.customers.js" />
+    <None Include="wwwroot\assets\js\pages\demo.dashboard-analytics.js" />
+    <None Include="wwwroot\assets\js\pages\demo.dashboard-crm.js" />
+    <None Include="wwwroot\assets\js\pages\demo.dashboard-projects.js" />
+    <None Include="wwwroot\assets\js\pages\demo.dashboard.js" />
+    <None Include="wwwroot\assets\js\pages\demo.datatable-init.js" />
+    <None Include="wwwroot\assets\js\pages\demo.form-wizard.js" />
+    <None Include="wwwroot\assets\js\pages\demo.google-maps.js" />
+    <None Include="wwwroot\assets\js\pages\demo.inbox.js" />
+    <None Include="wwwroot\assets\js\pages\demo.jstree.js" />
+    <None Include="wwwroot\assets\js\pages\demo.materialdesignicons.js" />
+    <None Include="wwwroot\assets\js\pages\demo.products.js" />
+    <None Include="wwwroot\assets\js\pages\demo.profile.js" />
+    <None Include="wwwroot\assets\js\pages\demo.project-detail.js" />
+    <None Include="wwwroot\assets\js\pages\demo.project-gantt.js" />
+    <None Include="wwwroot\assets\js\pages\demo.quilljs.js" />
+    <None Include="wwwroot\assets\js\pages\demo.sellers.js" />
+    <None Include="wwwroot\assets\js\pages\demo.simplemde.js" />
+    <None Include="wwwroot\assets\js\pages\demo.sparkline.js" />
+    <None Include="wwwroot\assets\js\pages\demo.tasks.js" />
+    <None Include="wwwroot\assets\js\pages\demo.timepicker.js" />
+    <None Include="wwwroot\assets\js\pages\demo.toastr.js" />
+    <None Include="wwwroot\assets\js\pages\demo.typehead.js" />
+    <None Include="wwwroot\assets\js\pages\demo.vector-maps.js" />
+    <None Include="wwwroot\assets\js\pages\demo.widgets.js" />
+    <None Include="wwwroot\assets\js\ui\component.chat.js" />
+    <None Include="wwwroot\assets\js\ui\component.dragula.js" />
+    <None Include="wwwroot\assets\js\ui\component.fileupload.js" />
+    <None Include="wwwroot\assets\js\ui\component.range-slider.js" />
+    <None Include="wwwroot\assets\js\ui\component.rating.js" />
+    <None Include="wwwroot\assets\js\ui\component.scrollbar.js" />
+    <None Include="wwwroot\assets\js\ui\component.todo.js" />
+    <None Include="wwwroot\assets\js\vendor.js" />
+    <None Include="wwwroot\assets\js\vendor.min.js" />
+    <None Include="wwwroot\assets\js\vendor.min.js.map" />
+    <None Include="wwwroot\assets\js\vendor\apexcharts.min.js" />
+    <None Include="wwwroot\assets\js\vendor\britecharts.min.js" />
+    <None Include="wwwroot\assets\js\vendor\buttons.bootstrap5.min.js" />
+    <None Include="wwwroot\assets\js\vendor\buttons.flash.min.js" />
+    <None Include="wwwroot\assets\js\vendor\buttons.html5.min.js" />
+    <None Include="wwwroot\assets\js\vendor\buttons.print.min.js" />
+    <None Include="wwwroot\assets\js\vendor\Chart.bundle.min.js" />
+    <None Include="wwwroot\assets\js\vendor\d3.min.js" />
+    <None Include="wwwroot\assets\js\vendor\dataTables.bootstrap5.js" />
+    <None Include="wwwroot\assets\js\vendor\dataTables.buttons.min.js" />
+    <None Include="wwwroot\assets\js\vendor\dataTables.checkboxes.min.js" />
+    <None Include="wwwroot\assets\js\vendor\dataTables.keyTable.min.js" />
+    <None Include="wwwroot\assets\js\vendor\dataTables.responsive.min.js" />
+    <None Include="wwwroot\assets\js\vendor\dataTables.select.min.js" />
+    <None Include="wwwroot\assets\js\vendor\dragula.min.js" />
+    <None Include="wwwroot\assets\js\vendor\dropzone.min.js" />
+    <None Include="wwwroot\assets\js\vendor\fixedColumns.bootstrap5.min.js" />
+    <None Include="wwwroot\assets\js\vendor\fixedHeader.bootstrap5.min.js" />
+    <None Include="wwwroot\assets\js\vendor\frappe-gantt.min.js" />
+    <None Include="wwwroot\assets\js\vendor\fullcalendar.min.js" />
+    <None Include="wwwroot\assets\js\vendor\gmaps.min.js" />
+    <None Include="wwwroot\assets\js\vendor\handlebars.min.js" />
+    <None Include="wwwroot\assets\js\vendor\ion.rangeSlider.min.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-1.2.2.min.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-au-mill-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-ca-lcc-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-es-merc.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-es-mill.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-europe-mill-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-fr-merc-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-in-mill-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-uk-mill-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-us-il-chicago-mill-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-us-merc-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-jvectormap-world-mill-en.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery-ui.min.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery.dataTables.min.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery.rateit.min.js" />
+    <None Include="wwwroot\assets\js\vendor\jquery.sparkline.min.js" />
+    <None Include="wwwroot\assets\js\vendor\jstree.min.js" />
+    <None Include="wwwroot\assets\js\vendor\quill.min.js" />
+    <None Include="wwwroot\assets\js\vendor\responsive.bootstrap5.min.js" />
+    <None Include="wwwroot\assets\js\vendor\simplemde.min.js" />
+    <None Include="wwwroot\assets\js\vendor\typeahead.bundle.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="EFCore.NamingConventions" Version="8.0.3" />
+	<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.6" />
+	<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
+	<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+	<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+
+	  <PackageReference Include="OpenIddict" Version="5.6.0" />
+	  <PackageReference Include="OpenIddict.AspNetCore" Version="5.6.0" />
+	  <PackageReference Include="OpenIddict.EntityFrameworkCore" Version="5.6.0" />
+
+	 
+	<PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

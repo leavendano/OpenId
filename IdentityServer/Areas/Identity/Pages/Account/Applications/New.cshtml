@@ -1,0 +1,80 @@
+﻿@page
+@model IdentityServer.Areas.Identity.Pages.Account.Applications.NewModel
+@{
+}
+
+
+<div class="content-header">
+    <div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+        <h2 class="m-0 text-dark">@ViewData["Title"]</h2>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+        <div class="float-sm-end">
+           <a id="new-user" class="btn btn-primary" asp-area="Identity" asp-page="/Account/Applications/Index">Listado</a>
+        </div>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 margin-tb">
+                
+                <div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">Datos</h3>
+  </div>
+  <div class="card-body">
+     <form id="rolesForm"  method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-floating">
+            <input asp-for="Input.ClientId" class="form-control" autocomplete="name" aria-required="true" />
+            <label asp-for="Input.ClientId"></label>
+            <span asp-validation-for="Input.ClientId" class="text-danger"></span>
+        </div>
+        <div class="form-floating">
+            <input asp-for="Input.DisplayName" class="form-control" autocomplete="normalizedName" aria-required="true" />
+            <label asp-for="Input.DisplayName"></label>
+            <span asp-validation-for="Input.DisplayName" class="text-danger"></span>
+        </div>
+        <div class="form-floating">
+            <input asp-for="Input.RedirectUris" class="form-control" autocomplete="normalizedName" aria-required="true" />
+            <label asp-for="Input.RedirectUris"></label>
+            <span asp-validation-for="Input.RedirectUris" class="text-danger"></span>
+        </div>
+
+         <div class="form-floating">
+            <input asp-for="Input.LogoutUris" class="form-control" autocomplete="normalizedName" aria-required="true" />
+            <label asp-for="Input.LogoutUris"></label>
+            <span asp-validation-for="Input.LogoutUris" class="text-danger"></span>
+        </div>
+        <div class="form-floating">
+            <input asp-for="Input.ClientSecret" class="form-control" autocomplete="normalizedName" aria-required="true" />
+            <label asp-for="Input.ClientSecret"></label>
+            <span asp-validation-for="Input.ClientSecret" class="text-danger"></span>
+        </div>
+        <div class="form-floating">
+            <input asp-for="Input.ConfirmSecret" class="form-control" autocomplete="normalizedName" aria-required="true" />
+            <label asp-for="Input.ConfirmSecret"></label>
+            <span asp-validation-for="Input.ConfirmSecret" class="text-danger"></span>
+        </div>
+        <div class="card-footer">
+            <div class="actions">
+                <button id="registerSubmit" type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+        </div>
+
+     </form>
+   </div>
+</div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

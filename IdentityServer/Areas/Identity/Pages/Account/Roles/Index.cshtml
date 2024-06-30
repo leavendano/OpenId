@@ -1,0 +1,58 @@
+﻿@page
+@model IdentityServer.Areas.Identity.Pages.Account.Roles.IndexModel
+@{
+    ViewData["Title"] = "Roles";
+}
+
+
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h2 class="m-0 text-dark">
+			@ViewData["Title"]	
+		</h2>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <div class="float-sm-end">
+		    <a id="new-user" class="btn btn-primary" asp-area="Identity" asp-page="/Account/Roles/New">Nuevo</a>
+        </div>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<div class=card-body></div>
+<div class="content">
+  <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 margin-tb">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>
+                            Name
+                        </th>
+                        <th>NormalizedName</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.RolesList) 
+                    {
+                        <tr>
+                           <td>@item.Id</td>
+                           <td>@item.Name</td>
+                           <td>@item.NormalizedName</td>
+                           <td><a id="new-user" class="btn btn-success" asp-area="Identity" asp-page="/Account/Roles/Edit" asp-route-id="@item.Id" >Editar</a></td>
+                       </tr>
+                    }
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

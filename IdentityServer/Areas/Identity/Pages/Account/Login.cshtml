@@ -1,0 +1,80 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Log in";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - IdentityServer</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- App css -->
+    <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style"/>
+</head>
+<body class="authentication-bg pb-0" data-layout-color="light">
+    <div class="auth-fluid">
+        <!--Auth fluid left content -->
+        <div class="auth-fluid-form-box">
+            <div class="align-items-center d-flex h-100">
+                <div class="card-body">
+                    <!-- Logo -->
+                    <div class="auth-brand text-center">
+                        <a class="logo-dark">
+                            <span><img src='@ViewData["ReturnUrl"]images/logo_login.png' alt="" height="150"></span>
+                        </a>
+                        <a class="logo-light">
+                            <span><img src='@ViewData["ReturnUrl"]images/logo_login.png' alt="" height="150"></span>
+                        </a>
+                    </div>
+                    <p class="text-muted mb-4 text-center">Proporcione su información de usuario.</p>
+                    <form id="account" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="mb-3">
+                            <label asp-for="Input.Email" class="form-label"></label>
+                            <input asp-for="Input.Email" class="form-control" autocomplete="off" aria-required="true"/>
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Input.Password" class="form-label"></label>
+                            <input asp-for="Input.Password" class="form-control" autocomplete="off" aria-required="true"/>
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                        <div class="d-grid mb-0 text-center">
+                            <button id="login-submit" type="submit" class="w-100 btn btn-primary"><i class="mdi mdi-login"></i> Iniciar Sesión </button>
+                        </div>
+                    </form>
+                    <!-- Footer-->
+                    <footer class="footer footer-alt">
+                        <p class="text-muted ms-1 fw-bold">Versión 1.0</p>
+                    </footer>
+                </div> <!-- end .card-body -->
+            </div>
+        </div>
+        <!-- end auth-fluid-form-box-->
+        <!-- Auth fluid right content -->
+        <div class="auth-fluid-right text-center">
+            <div class="auth-user-testimonial">
+            </div> <!-- end auth-user-testimonial-->
+        </div>
+        <!-- end Auth fluid right content -->
+    </div>
+    <!-- end auth-fluid-->
+    <!-- bundle -->
+    <script src="~/assets/js/vendor.min.js"></script>
+    <script src="~/assets/js/app.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    
+    @section Scripts {
+      
+    }
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>
