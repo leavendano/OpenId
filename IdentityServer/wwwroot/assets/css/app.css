@@ -18098,7 +18098,7 @@ body.auth-fluid-pages[data-leftbar-compact-mode=condensed] {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  background: url("../images/bg-auth.jpg") center;
+  background: url("../images/bg-auth.png") center;
   background-size: cover;
 }
 .auth-fluid .auth-fluid-form-box {
@@ -19289,7 +19289,7 @@ body[data-layout-color=dark] .timeline-show .time-show-name {
 }
 
 .datepicker table tr td.today.active, .datepicker table tr td.today.disabled.active, .datepicker table tr td.today.disabled:active, .datepicker table tr td.today.disabled:hover.active, .datepicker table tr td.today.disabled:hover:active, .datepicker table tr td.today:active, .datepicker table tr td.today:hover.active, .datepicker table tr td.today:hover:active {
-  background-color: #fbf069\9 ;
+  background-color: #fbf069 ;
 }
 
 .datepicker table tr td.today:hover:hover {
@@ -19322,7 +19322,7 @@ body[data-layout-color=dark] .timeline-show .time-show-name {
 }
 
 .datepicker table tr td.range.today.active, .datepicker table tr td.range.today.disabled.active, .datepicker table tr td.range.today.disabled:active, .datepicker table tr td.range.today.disabled:hover.active, .datepicker table tr td.range.today.disabled:hover:active, .datepicker table tr td.range.today:active, .datepicker table tr td.range.today:hover.active, .datepicker table tr td.range.today:hover:active {
-  background-color: #efe24b\9 ;
+  background-color: #efe24b ;
 }
 
 .datepicker table tr td.selected, .datepicker table tr td.selected.disabled, .datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected:hover {
