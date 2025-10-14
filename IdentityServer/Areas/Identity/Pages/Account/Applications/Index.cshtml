@@ -45,6 +45,7 @@
                            <td>@item.ApplicationName</td>
                            <td><a id="new-user" class="btn btn-success" asp-area="Identity" asp-page="/Account/Applications/Edit" asp-route-id="@item.ClientId" >Editar</a>
                                <a id="del-user" class="btn btn-danger" asp-area="Identity" asp-page="/Account/Applications/Delete" asp-route-id="@item.ClientId" >Eliminar</a> 
+                               <a id="del-user" class="btn btn-danger" asp-area="Identity" asp-page="/Account/Applications/ChangePassword" asp-route-id="@item.ClientId" >Password</a> 
                            </td>
                        </tr>
                     }

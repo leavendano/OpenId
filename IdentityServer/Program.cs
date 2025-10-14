@@ -25,7 +25,7 @@ _ = int.TryParse(builder.Configuration["CommandTimeout"] ?? "60", out int Comman
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseNpgsql(connectionString);
-    //options.UseSqlServer(connectionString, sqlServerOptions => sqlServerOptions.CommandTimeout(CommandTimeout));
+   
     // Register the entity sets needed by OpenIddict.
     options.UseOpenIddict();
 

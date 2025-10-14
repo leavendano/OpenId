@@ -108,7 +108,11 @@ namespace IdentityServer.Areas.Identity.Pages.Account
             if(returnUrl.Length > 10)
             {
                 var return_url = HttpUtility.ParseQueryString(returnUrl).Get("redirect_uri");
-                ViewData["ReturnUrl"] = return_url[..return_url.IndexOf("signin-oidc")];
+                if (return_url is not null && return_url.Contains("signin-oidc"))
+                {
+                    ViewData["ReturnUrl"] = return_url[..return_url.IndexOf("signin-oidc")];
+                }
+              
             }
             
             ReturnUrl = returnUrl;
