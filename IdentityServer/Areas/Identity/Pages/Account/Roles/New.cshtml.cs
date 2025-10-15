@@ -19,7 +19,7 @@ namespace IdentityServer.Areas.Identity.Pages.Account.Roles
         [BindProperty]
         public InputModel Input { get; set; } = new InputModel();
 
-        public string ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
         public class InputModel
         {
             [Required]
@@ -28,7 +28,7 @@ namespace IdentityServer.Areas.Identity.Pages.Account.Roles
             public string? NormalizedName { get; set; }
 
         }
-        public void OnGet(string returnUrl = null)
+        public void OnGet(string? returnUrl = null)
         {
            ReturnUrl = returnUrl;  
         }
@@ -41,7 +41,7 @@ namespace IdentityServer.Areas.Identity.Pages.Account.Roles
                 var role = CreateRole();
 
                 role.Name = Input.Name;
-                role.NormalizedName = Input.NormalizedName.ToUpper();
+                role.NormalizedName = Input.NormalizedName?.ToUpper() ?? string.Empty;
 
                 var result =  await _roleManager.CreateAsync(role);
                 if (result.Succeeded)

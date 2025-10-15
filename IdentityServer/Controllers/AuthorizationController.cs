@@ -45,7 +45,8 @@ public class AuthorizationController : Controller
                 });
         }
         List<Claim>? claims = new() { };
-        var user = await _userManager.FindByNameAsync(result.Principal.Identity.Name);
+        var user = result.Principal?.Identity?.Name != null ? 
+            await _userManager.FindByNameAsync(result.Principal.Identity.Name) : null;
         // Create a new claims principal
         //if (user != null)
         //{
@@ -53,13 +54,13 @@ public class AuthorizationController : Controller
         // }
 
 
-        claims.AddRange( new List<Claim>
-            {
+        claims.AddRange(
+            [
                 // 'subject' claim which is required
-                new Claim(OpenIddictConstants.Claims.Subject, result.Principal.Identity.Name),
+                new Claim(OpenIddictConstants.Claims.Subject, result.Principal?.Identity?.Name ?? string.Empty),
                 new Claim(OpenIddictConstants.Claims.Audience, "PolarisIdentityClients"),
-            });
-        var nousr = result.Principal.Claims.FirstOrDefault(q => q.Type == "nusr");
+            ]);
+        var nousr = result.Principal?.Claims.FirstOrDefault(q => q.Type == "nusr");
         if (user != null)
         {
             //claims.Add(new Claim("nusr", user.NoUsuario.ToString(), ClaimValueTypes.Integer));
@@ -147,12 +148,14 @@ public class AuthorizationController : Controller
         {
             //var user = await _userManager.FindByNameAsync(request.Username);
             // Retrieve the claims principal stored in the authorization code
-            claimsPrincipal = (await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme)).Principal;
+            var result = await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
+            claimsPrincipal = result?.Principal ?? throw new InvalidOperationException("Authentication failed.");
         }
         else if (request.IsRefreshTokenGrantType())
         {
             // Retrieve the claims principal stored in the refresh token.
-            claimsPrincipal = (await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme)).Principal;
+            var result = await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
+            claimsPrincipal = result?.Principal ?? throw new InvalidOperationException("Authentication failed.");
         }
         else
         {
@@ -175,8 +178,8 @@ public class AuthorizationController : Controller
 
         return Ok(new
         {
-            Sub = claimsPrincipal.GetClaim(OpenIddictConstants.Claims.Subject),
-            Name = claimsPrincipal.GetClaim(OpenIddictConstants.Claims.Subject),
+            Sub = claimsPrincipal?.GetClaim(OpenIddictConstants.Claims.Subject),
+            Name = claimsPrincipal?.GetClaim(OpenIddictConstants.Claims.Subject),
             Occupation = "Developer",
             Age = 31
         });

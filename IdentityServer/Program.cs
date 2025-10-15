@@ -88,7 +88,20 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 6;
     options.Password.RequiredUniqueChars = 1;
 });
-builder.Services.AddRazorPages();
+
+// Configure Razor Pages with authorization
+builder.Services.AddRazorPages(options =>
+{
+    // Require authentication for all pages in Areas/Identity/Pages
+    options.Conventions.AuthorizeAreaFolder("Identity", "/");
+
+    // Allow anonymous access to Login and Register pages
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/Login");
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/Register");
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/ForgotPassword");
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/ResetPassword");
+});
+
 builder.Services.AddControllers();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 

@@ -26,20 +26,20 @@ namespace IdentityServer.Areas.Identity.Pages.Account.Applications
             [Required]
             public string? ClientId { get; set; }
             [Required]
-            public string DisplayName { get; set; }
+            public string? DisplayName { get; set; }
 
             public string RedirectUris { get; set; } = @"https://localhost/signin-oidc";
 
             public string LogoutUris { get; set; } = @"https://localhost/signout-callback-oidc";
             [Required]
-            [StringLength(100, ErrorMessage = "El {0} debe tener  al menos {2} y un máximo {1} caracteres de longitud.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "El {0} debe tener  al menos {2} y un mï¿½ximo {1} caracteres de longitud.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
-            public string ClientSecret { get; set; }
+            public string? ClientSecret { get; set; }
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("ClientSecret", ErrorMessage = "El password y la confirmación no coinciden.")]
-            public string ConfirmSecret { get; set; }
+            [Compare("ClientSecret", ErrorMessage = "El password y la confirmaciï¿½n no coinciden.")]
+            public string? ConfirmSecret { get; set; }
 
         }
         public void OnGet()
@@ -59,6 +59,12 @@ namespace IdentityServer.Areas.Identity.Pages.Account.Applications
                 //app.RedirectUris = { new Uri(Input.RedirectUris)}
                 
                
+                if (string.IsNullOrEmpty(Input.ClientId))
+                {
+                    ModelState.AddModelError(string.Empty, "Client ID cannot be empty");
+                    return Page();
+                }
+
                 var client = await _appManager.FindByClientIdAsync(Input.ClientId);
                        
                
