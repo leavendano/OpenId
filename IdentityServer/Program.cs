@@ -50,10 +50,10 @@ builder.Services.AddOpenIddict()
             .RequireProofKeyForCodeExchange()
             .AllowRefreshTokenFlow();
 
-        options.SetLogoutEndpointUris("/connect/logout")
+        options.SetEndSessionEndpointUris("/connect/logout")
             .SetTokenEndpointUris("/connect/token")
             .SetAuthorizationEndpointUris("/connect/authorize")
-            .SetUserinfoEndpointUris("/connect/userinfo");
+            .SetUserInfoEndpointUris("/connect/userinfo");
 
         // Encryption and signing of tokens
         options
@@ -70,8 +70,8 @@ builder.Services.AddOpenIddict()
             .UseAspNetCore()
             .EnableTokenEndpointPassthrough()
             .EnableAuthorizationEndpointPassthrough()
-            .EnableUserinfoEndpointPassthrough()
-            .EnableLogoutEndpointPassthrough();
+            .EnableUserInfoEndpointPassthrough()
+            .EnableEndSessionEndpointPassthrough();
     });
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
@@ -166,7 +166,7 @@ async Task SeedDefaultClients()
             {
                 Permissions.Endpoints.Authorization,
                 Permissions.Endpoints.Token,
-                Permissions.Endpoints.Logout,
+                Permissions.Endpoints.EndSession,
 
                 Permissions.GrantTypes.AuthorizationCode,
                 Permissions.GrantTypes.ClientCredentials,

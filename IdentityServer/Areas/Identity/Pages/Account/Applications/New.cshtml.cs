@@ -81,7 +81,7 @@ namespace IdentityServer.Areas.Identity.Pages.Account.Applications
                             {
                                 Permissions.Endpoints.Authorization,
                                 Permissions.Endpoints.Token,
-                                Permissions.Endpoints.Logout,
+                                Permissions.Endpoints.EndSession,
 
                                 Permissions.GrantTypes.AuthorizationCode,
                                 Permissions.GrantTypes.ClientCredentials,
